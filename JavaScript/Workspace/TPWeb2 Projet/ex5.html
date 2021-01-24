@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Exercice 5</title>
+	<link rel="stylesheet" type="text/css" href="CSS/style.css">
+</head>
+<body>
+	<header>
+		<div class="iset_logo">
+			<a href="index.html"><img class="logoo" src="Images/logo.png"></a>
+		</div>
+		<div class="titre">
+			<h1>Bienvenue dans le Monde JS</h1>
+		</div>
+	</header>
+	<div class="contenu">
+		<nav>
+			<ul id="menu-accordeon">
+				<li><a href="#">Math</a>
+					<ul>
+						<li><a href="ex1.html">Exercice 1</a></li>
+						<li><a href="ex2.html">Exercice 2</a></li>
+						<li><a href="ex3.html">Exercice 3</a></li>
+						<li><a href="ex4.html">Exercice 4</a></li>
+						<li><a href="ex5.html">Exercice 5</a></li>
+					</ul>
+				</li>
+				<li><a href="#">String</a>
+					<ul>
+						<li><a href="ex6.html">Exercice 6</a></li>
+						<li><a href="ex7.html">Exercice 7</a></li>
+						<li><a href="ex8.html">Exercice 8</a></li>
+						<li><a href="ex9.html">Exercice 9</a></li>
+					</ul>
+				</li>
+				<li><a href="#">Date</a>
+					<ul>
+						<li><a href="ex10.html">Exercice 10</a></li>
+						<li><a href="ex11.html">Exercice 11</a></li>
+						<li><a href="ex12.html">Exercice 12</a></li>
+					</ul>
+				</li>
+				<li><a href="#">Tableau</a>
+					<ul>
+						<li><a href="ex13.html">Exercice 13</a></li>
+						<li><a href="ex14.html">Exercice 14</a></li>
+						<li><a href="ex15.html">Exercice 15</a></li>
+						<li><a href="ex16.html">Exercice 16</a></li>
+					</ul>
+				</li>
+				<li><a href="Etude.html">Etude de cas</a></li>
+			</ul>
+		</nav>
+		<section>
+			<article>
+				<p>Exercice 5</p>
+				<p id="result"></p>
+				<div class="form2">
+					<label>Somme :</label>
+					<input type="text" id="montant">
+				</div>
+				<input class="c" onclick="ex5_calcul();" type="button" value="Calcule">
+					<script type="text/javascript">
+						function ex5_calcul(){
+							var som=Number(document.getElementById("montant").value);
+							var som2=Number(0);
+							var b1000=Number(0);
+							var b100=Number(0);
+							var p50=Number(0);
+							var p20=Number(0);
+							var p5=Number(0);
+							var p1=Number(0);
+							som2=som;
+							while(som2>0){
+								while(som2>=1000){
+									som2-=1000;
+									b1000+=1;
+								}
+								while(som2>=100){
+									som2-=100;
+									b100+=1;
+								}
+								while(som2>=50){
+									som2-=50;
+									p50+=1;
+								}
+								while(som2>=20){
+									som2-=20;
+									p20+=1
+								}
+								while(som2>=5){
+									som2-=5;
+									p5+=1;
+								}
+								while(som2>=1){
+									som2-=1;
+									p1+=1;
+								}
+							}
+						//	alert(b1000);
+						//	alert(b100);
+							document.getElementById("result").innerHTML="billet de 1000 : "+b1000+"<br>billet de 100 : "+b100+"<br>piece de 50 : "+p50+"<br>piece de 20 : "+p20+"<br>piece de 5 : "+p5+"<br>piece de 1 : "+p1;
+						}
+					</script>
+			</article>
+		</section>
+	</div>
+	<footer><p>©Copyright ISET Bizerte 2019 --- Webmaster</p></footer>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>exercice2</title>
+	<style type="text/css">
+		table{
+			border:1px black solid;
+			margin-left: 30%;
+		}
+		button{
+			margin-right: 100px;
+			width: 100%;
+		}
+		input{
+			width: 99%;
+			text-align: right;
+		}
+	</style>
+	<script type="text/javascript">
+		var x='';
+		var y='';
+		var tab=[];
+		var tab2=new Array();
+		// for(var i=0;i<2;i++){
+		// 	tab[i]=new Array();
+		// }
+		var variable=0;
+		var operateur='';
+		var resultat=0;
+		var v;
+
+		function ajouter(v){
+			if(variable==0){
+				var tt='';	
+				tab.push(v);
+				for(var i=0;i<tab.length;i++){
+					tt=tt+tab[i];
+				}
+				document.getElementById('result').value=tt;
+			}
+			else{
+				var t2='';
+				tab2.push(v);
+				for(var i=0;i<tab.length;i++){
+					t2=t2+tab2[i];
+				}
+				document.getElementById('result').value=t2;
+			}
+		}
+		function op(operateur){
+			variable=1;
+			//operateur=document.getElementById('opp').innerHTML;
+			//document.getElementById('result').value=x+operateur;
+			document.getElementById('result').value=tab+operateur;
+		}
+	</script>
+</head>
+<body>
+	<div>
+		
+		<table>
+			<tr><td colspan="4"><input type="text" id="result"></td></tr>
+			<tr>
+				<td><button>(</button></td>
+				<td><button>)</button></td>
+				<td><button>%</button></td>
+				<td><button onclick="x=''; y=''; variable=0; document.getElementById('result').value='0';">CE</button></td>
+			</tr>
+			<tr>
+				<td><button onclick="if(variable==0){x=x+'7'; document.getElementById('result').value=x;}else{y=y+'7'; document.getElementById('result').value=x+operateur+y;}">7</button></td>
+				<td><button onclick="if(variable==0){x=x+'8'; document.getElementById('result').value=x;}else{y=y+'8'; document.getElementById('result').value=x+operateur+y;}">8</button></td>
+				<td><button onclick="if(variable==0){x=x+'9'; document.getElementById('result').value=x;}else{y=y+'9'; document.getElementById('result').value=x+operateur+y;}">9</button></td>
+				<td><button id="opp" onclick="variable=1; operateur='/'; document.getElementById('result').value=x+operateur;">/</button></td>
+			</tr>
+			<tr>
+				<td><button onclick="if(variable==0){x=x+'4'; document.getElementById('result').value=x;}else{y=y+'4'; document.getElementById('result').value=x+operateur+y;}">4</button></td>
+				<td><button onclick="if(variable==0){x=x+'5'; document.getElementById('result').value=x;}else{y=y+'5'; document.getElementById('result').value=x+operateur+y;}">5</button></td>
+				<td><button onclick="if(variable==0){x=x+'6'; document.getElementById('result').value=x;}else{y=y+'6'; document.getElementById('result').value=x+operateur+y;}">6</button></td>
+				<td><button onclick="variable=1; operateur='*'; document.getElementById('result').value=x+operateur;">x</button></td>
+			</tr>
+			<tr>
+				<td><button onclick="if(variable==0){x=x+'1'; document.getElementById('result').value=x;}else{y=y+'1'; document.getElementById('result').value=x+operateur+y;}">1</button></td>
+				<td><button onclick="if(variable==0){x=x+'2'; document.getElementById('result').value=x;}else{y=y+'2'; document.getElementById('result').value=x+operateur+y;}">2</button></td>
+				<td><button onclick="if(variable==0){x=x+'3'; document.getElementById('result').value=x;}else{y=y+'3'; document.getElementById('result').value=x+operateur+y;}">3</button></td>
+				<td><button onclick="variable=1; operateur='-'; document.getElementById('result').value=x+operateur;">-</button></td>
+			</tr>
+			<tr>
+				<td><button onclick="if(variable==0){x=x+'0'; document.getElementById('result').value=x;}else{y=y+'0'; document.getElementById('result').value=x+operateur+y;}">0</button></td>
+				<td><button>,</button></td>
+				<td><button onclick="if(operateur=='*'){resultat=Number(x)*Number(y);} if(operateur=='-'){resultat=Number(x)-Number(y);} if(operateur=='+'){resultat=Number(x)+Number(y);}if(operateur=='/'){resultat=Number(x)/Number(y);} document.getElementById('result').value=resultat; x=''; y=''; variable=0;">=</button></td>
+				<td><button onclick="variable=1; operateur='+'; document.getElementById('result').value=x+operateur;">+</button></td>
+			</tr>
+		</table>
+		
+	</div>
+</body>
+</html>

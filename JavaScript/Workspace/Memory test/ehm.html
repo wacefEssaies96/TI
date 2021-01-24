@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>memory</title>
+	<style type="text/css">
+		div{
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			width: 40%;
+		}
+		img{
+			width: 200px;
+			height: 200px;
+		}
+	</style>
+	<script type="text/javascript">
+		var i=0;
+		var j=0;
+		var tab=new Array();
+		var date_heur=new Date();
+		function change(x,i){
+			if(j<2){
+				j=j+1;
+				var variable=x.id;
+				if(variable=='img1'){
+					x.src="image1.jpg";
+				}
+				else{
+					x.src="image2.jpg";
+				}
+				tab.push(variable);
+			}
+			if(j==2){
+				j=0;
+				if(tab[0]==tab[1]){
+					document.getElementById('eh1').innerHTML="bravo";
+				}
+				else{
+					document.getElementById('eh1').innerHTML="!bravo";
+					document.getElementById(tab[0]).src="carte1.jpg";
+					document.getElementById(tab[1]).src="carte1.jpg";
+				}
+				tab = new Array();
+			}
+			document.getElementById('eh').innerHTML=tab;
+		}
+	</script>
+</head>
+<body>
+	<p id="eh"></p>
+	<p id="eh1"></p>
+	<div id="image">
+		<img id="img1" src="carte1.jpg" onclick="change(this,1);">
+		<img id="img2" src="carte1.jpg" onclick="change(this,2);">
+		<img id="img1" src="carte1.jpg" onclick="change(this,3);">
+		<img id="img2" src="carte1.jpg" onclick="change(this,4);">
+	</div>
+</body>
+</html>

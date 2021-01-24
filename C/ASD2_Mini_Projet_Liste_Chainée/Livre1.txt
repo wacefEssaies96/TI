@@ -1,0 +1,23 @@
+titre1
+auteur1
+eduteur1
+11 11 1111
+11 
+11 
+3
+categorie1
+4
+mot
+mott
+mottt
+motttt
+resumee1
+2
+1
+12 12 1212
+12 12 2017
+non
+3
+21 21 2000
+3 12 2020
+oui

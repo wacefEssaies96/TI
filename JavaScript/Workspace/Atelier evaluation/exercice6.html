@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>exercice6</title>
+	<script type="text/javascript">
+		var x=1;
+		function bas(){
+			var img1=document.getElementById('image1').src;
+			var img2=document.getElementById('image2').src;
+			var img3=document.getElementById('image3').src;
+			var img4=document.getElementById('image4').src;
+			if(x==1){
+				document.getElementById('image1').src=img2;
+				document.getElementById('image2').src=img1;
+			}
+			if(x==2){
+				document.getElementById('image2').src=img3;
+				document.getElementById('image3').src=img2;
+			}
+			if(x==3){
+				document.getElementById('image3').src=img4;
+				document.getElementById('image4').src=img3;
+			}
+			if(x<4){
+				x+=1;
+			}	
+		}
+		function haut(){
+			var img1=document.getElementById('image1').src;
+			var img2=document.getElementById('image2').src;
+			var img3=document.getElementById('image3').src;
+			var img4=document.getElementById('image4').src;
+
+			if(x==2){
+				document.getElementById('image1').src=img2;
+				document.getElementById('image2').src=img1;
+			}
+			if(x==3){
+				document.getElementById('image2').src=img3;
+				document.getElementById('image3').src=img2;
+			}
+			if(x==4){
+			 	document.getElementById('image3').src=img4;
+			 	document.getElementById('image4').src=img3;
+			}
+			if(x>1){
+				x-=1;
+			}
+
+		}
+	</script>
+	<style type="text/css">
+		img{
+			margin-left: 40%; width: 100px;
+		}
+		#d{
+			margin-left: 39%;
+		}
+	</style>
+
+</head>
+<body>
+	<img id="image1" src="image1.jpg"><br>
+	<img id="image2" src="image2.jpg"><br>
+	<img id="image3" src="image3.jpg"><br>
+	<img id="image4" src="image4.jpg"><br>
+	<button id="d" onclick="bas();">En bas</button>
+	<button onclick="haut();">En haut</button>
+</body>
+</html>

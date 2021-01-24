@@ -1,0 +1,227 @@
+body{
+	background-image: url(background.jpg);
+	background-size: 100% 100%;
+	background-position: 50% 50%;
+	background-attachment:fixed;
+	background-repeat:no-repeat;
+}
+/*======> Logo <======*/
+.logo{
+	width: 9%;
+	position: fixed; 
+	transition: all 0.5s;
+}
+.logo:hover{
+	transform: scale(1.2);
+}
+/*======> Menu 1 <======*/
+.y{
+	overflow: hidden;
+	padding-left: 12%;
+	margin-left: 10%;
+}
+.x{
+	display:inline-block;
+	float: left;
+	margin-right: 5px;
+	background-color:rgba(111, 111, 111, 0.5);
+}
+.x a{
+	display: block;
+	text-decoration: none;
+	color: aqua;
+	padding: 25px 15px;
+	font-size: 40px;
+	transition: all 0.5s;
+}
+.x a:hover {
+	/*transform: scale(1.2);*/
+	animation: menus 2s infinite;	
+}
+.x:hover , .x:focus , .x:active{
+	animation-name: menu;
+	animation-duration: 0.4s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+	/*background-color: grey;*/
+}
+@keyframes menus{
+	0%{
+   		background-color: #111;
+	}
+	50% {
+	    background-color: #3C3A3B;
+	}
+	100%{
+	    background-color: #111;
+	}
+}
+@keyframes menu {
+	to {
+    transform: scale(1.1);
+  }
+}
+@media screen and (max-width : 1300px){
+	.x{
+		margin-bottom: 5px;
+	}
+	.y .x{
+		width: 70%;
+	}
+	.x a{
+		width: 100%;
+		font-size: 30px;
+		text-align: center;
+	}
+	.x a:hover{
+		transform: scale(1.05);
+		animation: menu 2s infinite;	
+	}	
+	.aa{
+		display: none;
+	}
+}
+/*======> Menu 2 fixed left <======*/
+.aa{
+	top: 200px;
+	width: 170px;
+	left: 0px;
+	position: fixed;
+	color: white;
+}
+.bb{
+	padding: 0px 0px;
+}
+.cc{
+	background-color:rgb(0, 196, 254, 0.5);
+	color: white;
+	font-size: 20px;
+	text-decoration: none; 
+	display: block;
+	padding: 16px ;
+	margin-bottom: 5px;
+	transition: all 0.5s;
+	text-align: center;
+}
+.cc:hover{
+	/*transform: scale(1.2);*/
+	animation: menu2 1s ease-in-out infinite ;
+	transform: perspective(1px) translateZ(0);	
+	animation-iteration-count: 1;
+	background-color:	rgb(0,200,255,0.7); 
+}
+@keyframes menu2{
+/*	0%{
+		background-color: ;
+	}
+	50%{
+		background-color: rgb(0,200,255,0.7);
+	}
+	100%{
+	background-color: ;
+	}*/
+	16.65% {
+    transform: translateX(8px);
+  	}
+  	33.3% {
+    transform: translateX(-6px);
+  	}
+  	49.95% {
+   
+    transform: translateX(4px);
+ 	}
+ 	66.6% {
+    
+    transform: translateX(-2px);
+  	}
+  	83.25% {
+   
+    transform: translateX(1px);
+ 	}
+ 	 100% {
+    transform: translateX(0);
+  }
+}
+/*======> Structure <======*/
+article{
+	margin-right:15%; 
+	margin-left:15%;
+	border-radius: 10px;
+	margin-bottom: 20px;
+	background-color:rgba(111, 111, 111, 0.5);
+}
+header{
+	background-color:rgba(111, 111, 111, 0.5);
+	border-radius: 10px;
+	margin-top: 10px;
+}
+/*======> Text <======*/
+h1{
+	text-align: center;
+	font-size: 40px;
+	color: aqua;
+	margin: 20px;
+}
+p{
+	font-size: 20px;
+	color: white;
+	text-align: justify;
+}
+li{
+	font-size: 20px;
+	color: white;
+}
+/*======> Guide <======*/
+video{
+	width: 100%;
+	margin-right: auto;
+	margin-left: auto;
+}
+/*======> Code <======*/
+.dec{
+	color: green;
+}
+.inside{
+	color: blue;
+}
+pre{
+	background-color: black;
+	margin-right: 10%;
+	margin-left: 10%;
+	margin-bottom: : 10%;
+	border-radius: 20px;
+}
+code{
+	color: white;
+}
+/*======> Version web <======*/
+table{
+	border-radius: 10px;
+	border-spacing: 0px;
+	margin-left: auto;
+	margin-right: auto;
+}
+table .T{
+	width: 100%;
+	height: 80%;
+}
+/*======> About me <======*/
+.wacef{
+	width: 20%;
+	float: left;
+	border-radius: 20px;
+	padding-right: 10px;
+}
+.txt{
+	font-size: 20px;
+	color: white;
+}
+.article{
+	margin-right:15%; 
+	margin-left:15%;
+	border-radius: 10px;
+	margin-bottom: 20px;
+	background-color:rgba(111, 111, 111, 0.5);
+	min-height: 400px;
+}

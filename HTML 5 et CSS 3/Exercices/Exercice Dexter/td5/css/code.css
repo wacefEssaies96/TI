@@ -1,0 +1,24 @@
+
+#codes h2 {
+    background-color: white;
+    text-align: center;
+}
+
+pre {
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    width: 80%;
+    margin: 0 auto;
+
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+
+    border-left: 4px solid white;
+    /* padding-left: 0; */
+}
+
+.fct {
+    color: rgb(137, 241, 111);
+    
+}

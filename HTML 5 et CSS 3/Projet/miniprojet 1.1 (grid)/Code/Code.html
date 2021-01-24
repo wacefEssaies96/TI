@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Code</title>
+	<link rel="icon" href="..\Images\rocket.png">
+	<link rel="stylesheet" type="text/css" href="..\css\projet.css">
+	<meta charset="utf-8">
+</head>
+<body>
+	<img class="logo" src="..\Images\logo.png" alt="logo">
+	<div class="menu">
+			<a href="..\Home.html">Home</a>
+			<a href="..\How_to\Guide.html">Guide</a>
+			<a href="Code.html">Code</a>
+			<a href="..\Version_web\Version_web.html">Memory</a>
+			<a href="..\About me\About_me.html">Cv</a>
+	</div>
+	<div class="aa">
+		<ul class="bb">
+			<a class="cc" href="..\Home.html">Home</a></li>
+			<a class="cc" href="..\How_to\Guide.html">Guide</a>
+			<a class="cc" href="Code.html">Code</a>
+			<a class="cc" href="..\Version_web\Version_web.html">Version web</a>
+			<a class="cc" href="..\About me\About_me.html">About me</a>
+		</ul>
+	</div>
+		<article>
+			<header><h1>Module de saisie de la grille a lettre</h1></header>
+			<pre>
+				<code>
+
+	<span class="dec">char</span> remplissage(<span class="dec">char</span> T[taille][taille]){	
+		<span class="dec">FILE</span> *fichier;
+		fichier=fopen(<span class="inside">"fichier.txt"</span>,<span class="inside">"r"</span>);	
+		for(<span class="dec">int</span> i=0;i< taille;i++){
+			for(<span class="dec">int</span> j=0;j< taille;j++){
+				fscanf(fichier,<span class="inside">"%s"</span>,T);
+			}
+		}
+		fclose(fichier);
+		<span class="dec">return</span>(T[taille][taille]);
+	}
+
+				</code>
+			</pre>
+		</article>
+		<article>
+			<header><h1>Module du tableau Y</h1></header>
+			<pre>
+				<code>
+				
+	<span class="dec">int</span> tableau_boleen(<span class="dec">int</span> Y[taille][taille]){		
+		for(<span class="dec">int</span> i=0;i< taille;i++)						
+		{
+			for(<span class="dec">int</span> j=0;j<	taille;j++)
+			{
+				Y[i][j]=0;	
+			}
+		}
+		<span class="dec">return</span>(Y[taille][taille]);		
+	}			
+
+				</code>
+			</pre>
+		</article>
+		<article>
+			<header><h1>Module de saisie du nombre du joueurs</h1></header>
+			<pre>
+				<code>
+
+	<span class="dec">void</span> joueurs(<span class="dec">int</span> *n,<span class="dec">int</span> tj[],<span class="dec">int</span> ts[]){
+		printf(<span class="inside">"donner le nombre de joueurs : "</span>);
+		scanf(<span class="inside">"%d"</span>,n);
+		system(<span class="inside">"cls"</span>);
+		for(<span class="dec">int</span> i=0;i<*n;i++){						/*tableau des joueurs*/
+			if(i==0){
+				tj[0]=1;
+			}
+			else{
+				tj[i]=0;
+			}
+		}
+		for(<span class="dec">int</span> i=0;i<*n;i++){						/*tableau des scores*/
+			ts[i]=0;
+		}
+	}
+
+				</code>
+			</pre>
+		</article>
+		<article>
+			<header><h1>Module d'affichage de la grille pendant 5 sec</h1></header>
+			<pre>
+				<code>
+
+	<span class="dec">char</span> affichage(<span class="dec">char</span> T[taille][taille]){			
+		printf(<span class="inside">"     1   2   3   4\n"</span>);	
+		printf(<span class="inside">"   -----------------\n"</span>);
+		for(<span class="dec">int</span> i=0;i< taille;i++){
+			printf(<span class="inside">" %d "</span>,i+1);
+			for(<span class="dec">int</span> j=0;j< taille;j++){
+				printf(<span class="inside">"| %c "</span>,T[i][j]);
+			}
+			printf(<span class="inside">"|\n   -----------------\n"</span>);	
+		}
+		printf(<span class="inside">"Vous avez 5 secondes pour memoriser toutes les lettres !\n"</span>);
+		sleep(5);
+		system(<span class="inside">"cls"</span>);
+		<span class="dec">return</span>(T[taille][taille]);	
+	}
+
+				</code>
+			</pre>
+		</article>
+		<article>
+			<header><h1>Module de comparaison entre les deux tableaux</h1></header>
+			<pre>
+				<code>
+
+	<span class="dec">void</span> comparaison(<span class="dec">char</span> T[taille][taille],<span class="dec">int</span> Y[taille][taille],<span class="dec">int</span> *g){		
+		printf(<span class="inside">"     1   2   3   4\n"</span>);	
+		printf(<span class="inside">"   -----------------\n"</span>);
+		for(<span class="dec">int</span> i=0;i< taille;i++){
+			printf(<span class="inside">" %d "</span>,i+1);
+			for(<span class="dec">int</span> j=0;j< taille;j++){	
+				if (Y[i][j]==0){
+					printf(<span class="inside">"|   "</span>);
+					*g=1;
+				}
+				else{
+					printf(<span class="inside">"| %c "</span>,T[i][j]);
+				}
+			}
+			printf(<span class="inside">"|\n   -----------------\n"</span>);	
+		}
+	}
+				</code>
+			</pre>
+		</article>	
+		<article>
+			<header><h1>Module de saisie</h1></header>
+			<pre>
+				<code>
+	<span class="dec">void</span> saisie(<span class="dec">int</span> *c1,<span class="dec">int</span> *c2,<span class="dec">int</span> *c3,<span class="dec">int</span> *c4,<span class="dec">int</span> *n,<span class="dec">int</span> tj[],<span class="dec">char</span> T[taille][taille],<span class="dec">int</span> Y[taille][taille]){
+	do{
+		do{	
+			for(<span class="dec">int</span> i=0;i<*n;i++){
+				if(tj[i]==1){
+					do{
+			printf(<span class="inside">"joueur %d :\nDonner la case 1 : "</span>,i+1);
+			scanf(<span class="inside">"%d %d"</span>,c1,c2);	
+			if(*c1>=5||*c1<=0||*c2>=5||*c2<=0)
+			{
+				printf(<span class="inside">"veuillez entrer une valeur entre 1 et 4 !\n"</span>);
+			}
+			if(Y[*c1-1][*c2-1]==1){
+				printf(<span class="inside">"Invalid ! Veuillez entrer une case qui n'est pas ete choisis avant ! \n"</span>);
+			}
+					}while(Y[*c1-1][*c2-1]==1);
+				}
+			}
+			Y[*c1-1][*c2-1]=1;
+		}while(*c1>=5||*c1<=0||*c2>=5||*c2<=0);
+		system("cls");
+		printf(<span class="inside">"     1   2   3   4\n"</span>);	
+		printf(<span class="inside">"   -----------------\n"</span>);		
+		for(<span class="dec">int</span> i=0;i< taille;i++){
+			printf(<span class="inside">" %d "</span>,i+1);
+			for(<span class="dec">int</span> j=0;j< taille;j++){
+				if(Y[i][j]==0){
+					printf(<span class="inside">"|   "</span>);
+				}									
+				if(Y[i][j]==1){
+					printf(<span class="inside">"| %c "</span>,T[i][j]);
+				}	
+			}
+			printf(<span class="inside">"|\n   -----------------\n"</span>);
+		}
+		do
+		{
+			do{
+				for(<span class="dec">int</span> i=0;i<*n;i++){
+					if(tj[i]==1){
+						printf(<span class="inside">"joueur %d :\nDonner la case 2 : "</span>,i+1);
+						scanf(<span class="inside">"%d %d"</span>,c3,c4);
+					}
+				}
+				if(*c3>=5||*c3<=0||*c4>=5||*c4<=0)
+				{
+					printf(<span class="inside">"veuillez entrer une valeur entre 1 et 4 !\n"</span>);
+				}
+				if(*c1==*c3&&*c2==*c4);
+				{
+					printf(<span class="inside">"invalid !\n"</span>);
+				}
+				if(Y[*c3-1][*c4-1]==1){
+					printf(<span class="inside">"Veuillez entrer une case qui n'est pas ete choisis avant ! \n"</span>);
+				}
+			}while(Y[*c3-1][*c4-1]==1);
+		}while(*c3>=5||*c3<=0||*c4>=5||*c4<=0);
+	}while(*c1==*c3&&*c2==*c4);
+	system(<span class="inside">"cls"</span>);		
+	}
+				</code>
+			</pre>
+		</article>	
+
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TD3 Ex3</title>
+    <style>
+        label {
+            width: 150px;
+            float: left;
+        }
+
+        fieldset {
+            background-image: url(background.jpg);
+        }
+        
+        legend {
+            font-size: 30px;
+            font-style: italic;
+            font-weight: bold;
+            background-color: rgb(170, 201, 216);
+            color: black;
+            width: 130px;
+            text-align: center;
+            border-radius: 25%;
+            transform: rotate(-5deg);
+        }
+        form {
+            color: aliceblue;
+        }
+        form div {
+            margin-bottom: 10px;;
+        }
+    </style>
+</head>
+<body>
+    <form action="trait.php">
+        <fieldset>
+            <legend>Client</legend>
+            <div>
+                <label>Civilité</label>
+                <input type="radio" name="civilite" value="mlle"> Mademoiselle
+                <input type="radio" name="civilite" value="mme"> Madame
+                <input type="radio" name="civilite" value="mr" checked> Monsieur
+            </div>
+            <div>
+                <label for="nom">Nom/Prénom</label>
+                <input type="text" placeholder="Saisir un nom" name="nom" id="nom" required>
+            </div>
+            <div>
+                <label for="adresse">Adresse</label>
+                <textarea name="adresse" id="adresse" cols="50" rows="5"></textarea>
+            </div>
+            <div>
+                <label for="nom">N° Postal/Localité</label>
+                <input type="number" name="potal" id="postal" min="7000" step="100">
+                <input type="text" name="loc" value="Bizerte">
+            </div>
+            <div>
+                <label for="pays">Pays</label>
+                <select name="pays" id="pays">
+                    <option value="suisse">Suisse</option>
+                    <option value="tunisie" selected>Tunisie</option>
+                    <option value="france">France</option>
+                </select>
+            </div>
+            <div>
+                <label>Plateforme(s)</label>
+                <input type="checkbox" name="win" value="windows"> Windows
+                <input type="checkbox" name="mac" value="mac" checked> Macintosh
+                <input type="checkbox" name="unix" value="unix"> Unix
+            </div>
+            <div>
+                <label>Applicaions</label>
+                <select	name="Application"	size="5" multiple>
+                    <option	value="Bureautique" selected> Bureautique </option>
+                    <option	value="DAO"> DAO </option>
+                    <option	value="Statistiques"> Statistiques </option>
+                    <option	value="SGBD"> SGBD </option>
+                    <option	value="Internet"> Internet </option>
+                </select>
+            </div>
+            <div>
+                <input type="submit" value="Soumettre">
+                <input type="reset">
+            </div>
+        </fieldset>
+    </form>
+
+
+</body>
+</html>

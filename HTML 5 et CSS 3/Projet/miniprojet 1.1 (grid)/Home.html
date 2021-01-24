@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home</title>
+	<link rel="icon" href="Images\rocket.png">
+	<link rel="stylesheet" type="text/css" href="css\projet.css">
+	<meta charset="utf-8">
+</head>
+<body>
+	<img class="logo" src="Images\logo.png" alt="logo">
+	<div class="menu">
+			<a href="Home.html">Home</a>
+			<a href="How_to\Guide.html">Guide</a>
+			<a href="Code\Code.html">Code</a>
+			<a href="Version_web\Version_web.html">Memory</a>
+			<a href="About me\About_me.html">Contact</a>
+	</div>
+	<div class="aa">
+		<div class="bb">
+			<a class="cc" href="Home.html">Home</a>
+			<a class="cc" href="How_to\Guide.html">Guide</a>
+			<a class="cc" href="Code\Code.html">Code</a>
+			<a class="cc" href="Version_web\Version_web.html">Memory</a>
+			<a class="cc" href="About me\About_me.html">Contact</a>
+		</div>
+	</div>
+	<article>
+		<header><h1>Objectifs</h1></header>
+		<p>L’objectif du mini-projet est d’implémenter un programme en C visant à reproduire le célèbre jeu « Memory ».</p>
+	</article>
+	<article>
+		<header><h1>Description</h1></header>
+		<p>
+			Memory est un jeu se pratiquant à un joueur ou plus (deux dans notre cas) au tour par tour, dont le but est de collecter les paires correspondantes.<br>
+			Au début une grille de lettres sera révélée pendant quelques secondes (5 secondes par exemple), puis toutes les lettres seront cachées. Un premier joueur saisit les coordonnées de deux cases de la grille ; <br>
+			<ul>
+				<li>
+				Si c'est la même lettre qui apparaît dans les deux cases indiquées par le joueur, le joueur gagne un point et ces deux cases seront révélées jusqu’à la fin du jeu. Ensuite, le même joueur joue un autre tour et en saisit à nouveau les coordonnées de deux cases.
+				</li>
+			<li>
+				Si les lettres dans les deux cases ne correspondent pas (les lettres sont différentes), les deux lettres seront révélées pendant une courte durée puis cachées une autre fois, et c'est le rôle de l’autre joueur de jouer en suivant les mêmes règles énoncées cidessous.
+			</li>
+		</ul>
+		<p>
+			Celui qui a une bonne mémoire se souviendra de l'emplacement des lettres déjà retournées et pourra les utiliser lorsqu'il en aura besoin pour compléter une paire.<br>
+			Le gagnant est celui qui accumule plus de point à la fin du jeu (celui qui a formé le plus de paires).<br>
+		</p>
+		</p>
+	</article>
+	<article>
+		<header><h1>Indications</h1></header>
+		<p>
+			La grille peut être représentée par :
+			<ul>
+				<li>
+					Ou bien deux tableaux à deux dimensions, l’un est remplies par les lettres que les joueurs doivent révéler, l’autre mémorise si une case donnée est révélé ou non (par exemple 1 : pour dire révélé et 0 pour dire caché). 
+				</li>
+				<li>
+					Ou bien un seul tableau à deux dimensions, dont chaque cellule est unenregistrement contenant un champ contenant la lettre, et un champ indiquantsi la lettre doit être révélée ou cachée.
+				</li>
+			</ul>
+			<p>
+				Concernant le nombre de joueurs, on pourra utiliser un bouclage sur un tableau à une dimension contenant les scores de joueurs. 
+			</p>				
+		</p>
+	</article>
+</body>
+</html>

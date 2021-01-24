@@ -1,0 +1,29 @@
+#include<stdio.h>
+main()
+{
+	int n=2,i,d,x=0,a,k=1;
+	
+	do
+	{
+		d=0;
+		for(i=2;i<=(n/2);i++)
+		{
+			if(n%i==0)
+			{
+				d++;
+			}
+			if(d==0)
+			{
+				printf("%d",n);
+				x++;
+				a=x;
+			}
+			n++;
+			if(a/10==k)
+			{
+				printf("\n");
+				k++;
+			}
+		}
+	}while(x<100);
+}

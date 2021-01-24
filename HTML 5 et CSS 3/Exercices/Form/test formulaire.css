@@ -1,0 +1,35 @@
+label {
+	color: #f00;
+	font-weight: bold;
+	font-style: italic;
+	font-family: cursive;
+}
+
+legend {
+	color: blue;
+	font-weight: bold;
+	font-size: 30px;
+	font-style: italic;
+}
+textarea {
+	width: 300px;
+	height: 150px;
+}
+fieldset {
+	width: 500px;
+	margin-right: auto;
+	margin-left: auto;
+	background-image: url(test.jpg);
+}
+h1 {
+	color: #f04568;
+	font-family: monospace;
+}
+p {
+	font-style: italic;
+	font-weight: bold;
+}
+body {
+	background-image: url(test2.jpg);
+}
+

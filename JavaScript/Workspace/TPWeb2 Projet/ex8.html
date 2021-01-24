@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Exercice 8</title>
+	<link rel="stylesheet" type="text/css" href="CSS/style.css">
+</head>
+<body>
+	<header>
+		<div class="iset_logo">
+			<a href="index.html"><img class="logoo" src="Images/logo.png"></a>
+		</div>
+		<div class="titre">
+			<h1>Bienvenue dans le Monde JS</h1>
+		</div>
+	</header>
+	<div class="contenu">
+		<nav>
+			<ul id="menu-accordeon">
+				<li><a href="#">Math</a>
+					<ul>
+						<li><a href="ex1.html">Exercice 1</a></li>
+						<li><a href="ex2.html">Exercice 2</a></li>
+						<li><a href="ex3.html">Exercice 3</a></li>
+						<li><a href="ex4.html">Exercice 4</a></li>
+						<li><a href="ex5.html">Exercice 5</a></li>
+					</ul>
+				</li>
+				<li><a href="#">String</a>
+					<ul>
+						<li><a href="ex6.html">Exercice 6</a></li>
+						<li><a href="ex7.html">Exercice 7</a></li>
+						<li><a href="ex8.html">Exercice 8</a></li>
+						<li><a href="ex9.html">Exercice 9</a></li>
+					</ul>
+				</li>
+				<li><a href="#">Date</a>
+					<ul>
+						<li><a href="ex10.html">Exercice 10</a></li>
+						<li><a href="ex11.html">Exercice 11</a></li>
+						<li><a href="ex12.html">Exercice 12</a></li>
+					</ul>
+				</li>
+				<li><a href="#">Tableau</a>
+					<ul>
+						<li><a href="ex13.html">Exercice 13</a></li>
+						<li><a href="ex14.html">Exercice 14</a></li>
+						<li><a href="ex15.html">Exercice 15</a></li>
+						<li><a href="ex16.html">Exercice 16</a></li>
+					</ul>
+				</li>
+				<li><a href="Etude.html">Etude de cas</a></li>
+			</ul>
+		</nav>
+		<section>
+			<article>
+				<p>Exercice 8</p>
+				<p id="result"></p>
+				<p id="result2"></p>
+				<div class="form2">
+					<label>Chaine 1 :</label>
+					<input type="text" id="chaine">
+					<label>Un caractere a chercher :</label>
+					<input type="text" id="c">
+					
+				</div>
+				<input class="c" onclick="ex8();" type="button" value="Valider">
+					<script type="text/javascript">
+						function ex8(){
+							var ch=document.getElementById("chaine").value;
+							var c=document.getElementById("c").value;
+							var p;
+							p=ch.indexOf(c)+1;
+							var p1=0;
+							if(p>0){
+								document.getElementById("result").innerHTML="1er methode : <br>chaine : "+ch+"<br>caractere : "+c+" se trouve a la position "+p;
+							}
+							else{
+								document.getElementById("result").innerHTML="Le caractere n'existe pas dans la chaine";
+							}
+							for(var i=0;i<ch.length;i++){
+								if(ch.charAt(i)==c){
+									p1=i+1;
+									break;
+								}
+							}
+							if(p>0){
+								document.getElementById("result2").innerHTML="2eme methode : <br>chaine : "+ch+"<br>caractere : "+c+" se trouve a la position "+p1;
+							}
+							else{
+								document.getElementById("result2").innerHTML="Le caractere n'existe pas dans la chaine";
+							}
+						}
+					</script>
+			</article>
+		</section>
+	</div>
+	<footer><p>©Copyright ISET Bizerte 2019 --- Webmaster</p></footer>
+</body>
+</html>

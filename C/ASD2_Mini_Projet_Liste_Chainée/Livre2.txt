@@ -1,0 +1,17 @@
+titre2
+auteur2
+editeur2
+22 22 2222
+2
+22
+1
+categorie2
+2
+mot1
+mot2
+resume2
+1
+4
+2 5 2018
+9 6 2019
+non

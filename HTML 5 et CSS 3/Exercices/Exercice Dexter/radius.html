@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Border Radius</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: #5656cc;
+            /* border-radius: 30px; */
+            /* border-radius: 25% 10%; */
+            /* border-radius: 10% 30% 50% 70%; */
+            /* border-radius: 10% / 50%; */
+            /* border-radius: 10px 100px / 120px; */
+            border-radius: 50% 20% / 10% 40%;
+            transition: 2s all;
+        }
+
+        .box:hover {
+            border-radius: 0% 0% / 10% 40%;
+            background-color: orangered;
+            /* background: linear-gradient(white, blue); */
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>

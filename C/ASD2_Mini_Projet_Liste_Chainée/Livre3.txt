@@ -1,0 +1,20 @@
+titre3
+auteur3
+editeur3
+33 33 3333	
+3
+33
+2
+categorie3
+5
+mot1
+mot2
+mot3
+mot4
+mot5
+resume3
+1
+2
+2 5 2010
+8 8 2089
+non

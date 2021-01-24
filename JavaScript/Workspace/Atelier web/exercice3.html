@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>exercice3</title>
+</head>
+<body>
+	<h1>Deviner un chiffre entre 1 et 10 : </h1>
+	<input type="text" id="chiffre">
+	<button onclick="test()">resultat</button>
+	<script type="text/javascript">
+		function test() {
+			var champ=document.getElementById("chiffre").value;
+			const x=5;
+			if(champ==x){
+				alert("bravo vous avez devinez le bon chiffre ! ");
+			}
+			else
+			alert("raté !");	
+		}
+	</script>
+</body>
+</html>

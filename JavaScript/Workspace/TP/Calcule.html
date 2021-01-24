@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>exercice2</title>
+</head>
+<body>
+	
+	<h1>Donner un prix : </h1>
+	<h1 id="answer"></h1>
+	num 1 : <input type="text" id="num1">
+	<br>
+	num 2 : <input type="text" id="num2">
+	<br>
+	
+	<br>
+	<button onclick="calcul()"> Calculer </button>
+
+	<script type="text/javascript">
+		function calcul(){
+			var champ1=document.getElementById("num1").value;
+			var champ2=document.getElementById("num2").value;
+			var resultat=Number(champ1)+Number(champ2);
+			// alert("le resultat est : "+resultat);
+			document.getElementById("answer").innerHTML="Le resultat est : "+resultat;
+		}
+	</script>
+	
+	
+
+</body>
+</html>

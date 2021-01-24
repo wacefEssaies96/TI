@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Etude de cas</title>
+	<link rel="stylesheet" type="text/css" href="CSS/style.css">
+</head>
+<body>
+	<header>
+		<div class="iset_logo">
+			<a href="index.html"><img class="logoo" src="Images/logo.png"></a>
+		</div>
+		<div class="titre">
+			<h1>Bienvenue dans le Monde JS</h1>
+		</div>
+	</header>
+	<div class="contenu">
+		<nav>
+			<ul id="menu-accordeon">
+				<li><a href="#">Math</a>
+					<ul>
+						<li><a href="ex1.html">Exercice 1</a></li>
+						<li><a href="ex2.html">Exercice 2</a></li>
+						<li><a href="ex3.html">Exercice 3</a></li>
+						<li><a href="ex4.html">Exercice 4</a></li>
+						<li><a href="ex5.html">Exercice 5</a></li>
+					</ul>
+				</li>
+				<li><a href="#">String</a>
+					<ul>
+						<li><a href="ex6.html">Exercice 6</a></li>
+						<li><a href="ex7.html">Exercice 7</a></li>
+						<li><a href="ex8.html">Exercice 8</a></li>
+						<li><a href="ex9.html">Exercice 9</a></li>
+					</ul>
+				</li>
+				<li><a href="#">Date</a>
+					<ul>
+						<li><a href="ex10.html">Exercice 10</a></li>
+						<li><a href="ex11.html">Exercice 11</a></li>
+						<li><a href="ex12.html">Exercice 12</a></li>
+					</ul>
+				</li>
+				<li><a href="#">Tableau</a>
+					<ul>
+						<li><a href="ex13.html">Exercice 13</a></li>
+						<li><a href="ex14.html">Exercice 14</a></li>
+						<li><a href="ex15.html">Exercice 15</a></li>
+						<li><a href="ex16.html">Exercice 16</a></li>
+					</ul>
+				</li>
+				<li><a href="Etude.html">Etude de cas</a></li>
+			</ul>
+		</nav>
+		<section>
+			<article>
+			<p id="result2"></p>	
+				<div class="form3">
+					<label>Entree:</label>
+					<select id="prix_entree" onchange="prix();">
+						<option>Aucun</option>
+						<option>Entree 1</option>
+						<option>Entree 2</option>
+						<option>Entree 3</option>
+						<option>Entree 4</option>			
+					</select>
+					<label>Pour</label>
+					<input type="number" oninput="prix();" id="pers1">
+					<label>Personnes</label>
+
+					<label>Plat:</label>
+					<select id="prix_plat" onchange="prix();">
+						<option>Aucun</option>
+						<option>Plat 1</option>
+						<option>Plat 2</option>
+						<option>Plat 3</option>
+						<option>Plat 4</option>			
+					</select>
+					<label>Pour</label>
+					<input type="number" oninput="prix();" id="pers2">
+					<label>Personnes</label>
+
+					<label>Dessert:</label>
+					<select id="prix_dessert" onchange="prix();">
+						<option>Aucun</option>
+						<option>Dessert 1</option>
+						<option>Dessert 2</option>
+						<option>Dessert 3</option>
+						<option>Dessert 4</option>			
+					</select>
+					<label>Pour</label>
+					<input type="number" oninput="prix();" id="pers3">
+					<label>Personnes</label>
+					<label>Prix : </label>
+					<input type="text" id="result" disabled="">
+
+				</div>
+				<textarea id="adresse" style="width: 600px; margin-left: 22%; height: 100px;" placeholder="Entrez votre adresse"></textarea><br>
+				<input class="c" type="button" value="Commander" onclick="verifierCommande()">
+					<script type="text/javascript">
+						var prix_entree=[];
+						var prix_dessert=[];
+						var prix_plat=[];
+
+						for(var i=0;i<5;i++){
+								prix_entree[i]=9*i;
+						}
+						for(var i=0;i<5;i++){
+								prix_plat[i]=11*i;
+						}
+						for(var i=0;i<5;i++){
+								prix_dessert[i]=5*i;
+						}
+
+						var personne=0;
+						var test_plat=0;
+
+						var pe;
+						var pp;
+						var pd;
+						var per1;
+						var per2;
+						var per3;
+						var x=1;
+
+						function prix(){
+							pe=document.getElementById('prix_entree').selectedIndex;
+							pp=document.getElementById('prix_plat').selectedIndex;
+							pd=document.getElementById('prix_dessert').selectedIndex;
+
+							per1=Number(document.getElementById('pers1').value);
+							per2=Number(document.getElementById('pers2').value);
+							per3=Number(document.getElementById('pers3').value);	
+
+							if((pe>0)&&(per1==0)){
+							 	document.getElementById('pers1').value=1;
+							 	per1=Number(document.getElementById('pers1').value);
+							}
+							if((pp>0)&&(per2==0)){
+								document.getElementById('pers2').value=1;
+								per2=Number(document.getElementById('pers2').value);
+							}
+							if((pd>0)&&(per3==0)){
+								document.getElementById('pers3').value=1;
+								per3=Number(document.getElementById('pers3').value);	
+							}
+
+							var prix=(per1*prix_entree[pe])+(per2*prix_plat[pp])+(per3*prix_dessert[pd]);
+							personne=per1+per2+per3;
+
+							if ((prix>70)&&(x==1)){
+								alert("Vous avez droit a un dessert gratuit ! ");
+								x=0;
+							}
+							if(prix>70){
+								
+								if((pd==0)&&(per3==0)){
+									document.getElementById("prix_dessert").selectedIndex=1;
+									document.getElementById('pers3').value=1;
+								}
+								prix=(per1*prix_entree[pe])+(per2*prix_plat[pp])+((per3-1)*prix_dessert[pd]);
+								
+							}
+		
+							document.getElementById('result').value=prix;
+
+							if((pe>0)&&(pp>0)&&(pd>0)){
+								test_plat=1;
+							}
+							if((pe>0)&&(pp>0)){
+								test_plat=1;
+							}
+							if((pp==0)||(pe==0)){
+								test_plat=0;
+							}
+						}
+						var adresse;
+						function adresseValide(){
+							adresse=document.getElementById("adresse").value;
+							var test;
+							if(adresse==0){
+								test=0;
+							}
+							if(adresse.length<=6){
+								test=0;
+							}
+							if(adresse.length>6){
+								for(var i=0;i<adresse.length;i++){
+									if(i<5){
+										if(isNaN(adresse[i])==false){
+											test=1;
+										}
+										else{
+											test=0;
+											break;
+										}
+									}
+									if(i>=5){
+										if(isNaN(adresse[i]==true)){
+											test=0;
+										}
+										else{
+											test=1;
+											break;
+										}
+									}
+								}
+							}
+							if(test==1){
+								return true;
+							}
+							if(test==0){
+								return false;
+							}
+						}
+						function verifierCommande(){
+							if((adresseValide()==true)&&(personne>0)&&(personne<10)&&(test_plat==1)){
+								mail();
+							}
+							if (test_plat==0){
+								alert("Plat invalid !");
+							}
+							if(adresseValide()==false){
+								alert("Adresse invalid !");
+							}
+							if((personne>=10)||(personne==0)||(personne<0)){
+								alert("Nombre de personne invalid !");
+							}
+						}
+						function mail(){
+							var mail='wacef.stratrait@gmail.com';
+							var subject='Commande';
+							var message='';
+							if(pe>0){
+								message=message.concat('Entree : '+pe+' pour : '+per1+' personne.<br>');
+							}
+							if(pp>0){
+								message=message.concat('Plat : '+pp+' pour '+per2+' personne.<br>');
+							}
+							if(pd>0){
+								message=message.concat('Dessert : '+pd+' pour '+per3+' personne.<br>');
+							}
+							message=message.concat('Adresse : '+adresse);
+							document.getElementById('result2').innerHTML=message;
+							var email ='mailto:'+mail+'?subject='+subject+'&body='+message;
+							win=window.open(email,'emailWindow');
+							//window.location.href="email";
+						}
+					</script>
+			</article>
+		</section>
+	</div>
+	<footer><p>©Copyright ISET Bizerte 2019 --- Webmaster</p></footer>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Code</title>
+	<link rel="icon" href="..\Images\rocket.png">
+	<link rel="stylesheet" type="text/css" href="..\css\projet.css">
+</head>
+<body>
+	<img class="logo" src="..\Images\logo.png" alt="logo">
+	<div class="menu">
+		<ul class="y">
+			<li class="x"><a href="..\Home.html">Home</a></li>
+			<li class="x"><a href="..\How_to\Guide.html">Guide</a></li>
+			<li class="x"><a href="Code.html">Code</a></li>
+			<li class="x"><a href="..\Version_web\Version_web.html">Version web</a></li>
+			<li class="x"><a href="..\About me\About_me.html">About me</a></li>
+		</ul>
+	</div>
+	<div class="aa">
+		<ul class="bb">
+			<a class="cc" href="..\Home.html">Home</a></li>
+			<a class="cc" href="..\How_to\Guide.html">Guide</a>
+			<a class="cc" href="Code.html">Code</a>
+			<a class="cc" href="..\Version_web\Version_web.html">Version web</a>
+			<a class="cc" href="..\About me\About_me.html">About me</a>
+		</ul>
+	</div>
+		<article>
+			<header><h1>Module de saisie de la grille a lettre</h1></header>
+			<pre>
+				<code>
+
+	<span class="dec">char</span> remplissage(<span class="dec">char</span> T[taille][taille])		
+	{	
+		for(<span class="dec">int</span> i=0;i< taille;i++)	
+		{
+			for(<span class="dec">int</span> j=0;j< taille;j++)
+			{
+				printf(<span class="inside">"donner la valeur de la case [%d][%d] : "</span>,i+1,j+1);
+				scanf(<span class="inside">"%s"</span>,&T[i][j]);
+				system(<span class="inside">"cls"</span>);
+			}
+		}
+		<span class="dec">return</span>(T[taille][taille]);
+	}		
+
+				</code>
+			</pre>
+		</article>
+		<article>
+			<header><h1>Module d'affichage</h1></header>
+			<pre>
+				<code>
+				
+	<span class="dec">char</span> affichage(<span class="dec">char</span> T[taille][taille])	
+	{
+		printf(<span class="inside">"     1   2   3   4\n"</span>);
+				printf(<span class="inside">"   -----------------\n"</span>);
+		for(<span class="dec">int</span> i=0;i< taille ;i++)
+		{
+			printf(<span class="inside">" %d "</span>,i+1);
+			for(<span class="dec">int</span> j=0;j< taille ;j++)
+			{
+				printf(<span class="inside">"| %c "</span>,T[i][j]);
+			}
+			printf(<span class="inside">"|\n   -----------------\n"</span>);	
+		}
+		printf(<span class="inside">"Vous avez 5 secondes pour memoriser toutes les lettres !\n"</span>);
+		sleep(5);
+		system(<span class="inside">"cls"</span>);
+		<span class="dec">return</span>(T[taille][taille]);	
+	}			
+				</code>
+			</pre>
+				
+</body>
+</html>

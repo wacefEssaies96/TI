@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Exercice2</title>
+	
+</head>
+<body>
+	<p id="text">Bonjour tous le monde !</p>
+	<input type="text" name="zone" id="z">
+	<button onclick="changerText();">Changer le texte</button>
+	<script type="text/javascript">
+		function changerText(){
+			var x=document.getElementById('z').value;
+			document.getElementById('text').innerHTML=x;
+		}
+	</script>
+</body>
+</html>

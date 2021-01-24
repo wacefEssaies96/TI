@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Exercice2</title>
+	<script type="text/javascript">
+		function load(){
+			var body=document.body;
+			var h1=document.createElement("h1");
+			var hh=document.createTextNode("Creation avec DOM");
+			h1.appendChild(hh);
+			body.appendChild(h1);
+			var div=document.createElement("div");
+			div.id="Liste";
+			var p=document.createElement("p");
+			var paragraph=document.createTextNode("Ma liste de courses : ");
+			p.appendChild(paragraph);
+			div.appendChild(p);
+			ul=document.createElement("ul");
+			var tab=["champignos","Aavocat","banane","Dentifrice"];
+			for(var i=0;i<tab.length;i++){
+				var	li=document.createElement("li");
+				var text=document.createTextNode(tab[i]);
+				li.appendChild(text);
+				ul.appendChild(li);
+			}
+			div.appendChild(ul);
+			body.appendChild(div);
+			var div2=document.createElement("div");
+			div2.id="Image";
+			var p=document.createElement("p");
+			var paragraph=document.createTextNode("Les images : ");
+			p.appendChild(paragraph);
+			div2.appendChild(p);
+			
+			var img=document.createElement("img");
+			img.src="images/img3.jpg";
+			img.alt="img3";
+			div2.appendChild(img);
+			var img2=document.createElement("img");
+			img2.src="images/img5.jpg";
+			img2.alt="img5";
+			div2.appendChild(img2);
+			body.appendChild(div2);
+			var div3=document.createElement("div");
+			div3.id="lien";
+			var p=document.createElement("p");
+			var text=document.createTextNode("Les liens : ");
+			p.appendChild(text);
+			div3.appendChild(p);
+			var a=document.createElement("a");
+			a.href="https://www.google.com/";
+			text=document.createTextNode("Google");
+			a.appendChild(text);
+			div3.appendChild(a);
+
+			var a=document.createElement("a");
+			a.href="https://fr.yahoo.com/";
+			var text=document.createTextNode("Yahoo");
+			a.appendChild(text);
+			div3.appendChild(a);
+			body.appendChild(div3);
+			var div4=document.createElement("div");
+			div4.id="Bouton";
+			var p=document.createElement("p");
+			var text=document.createTextNode("Les bouton");
+			p.appendChild(text);
+			div4.appendChild(p);
+			var input=document.createElement("input");
+			input.type="Button";
+			input.value="Nombres";
+			div4.appendChild(input);
+			var input=document.createElement("input");
+			input.type="Button";
+			input.value="Contenu";
+			div4.appendChild(input);
+			body.appendChild(div4);
+		}
+	</script>
+</head>
+<body onload="load();">
+
+</body>
+</html>

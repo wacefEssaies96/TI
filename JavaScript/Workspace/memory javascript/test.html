@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>test</title>
+	<style type="text/css">
+		div{
+			display: grid;
+			grid-template-columns: 1fr 1fr 1fr 1fr;
+			grid-row-gap: 20px;
+			grid-column-gap: 20px;
+			width: 59%;
+			/*background-color: black;*/
+			margin-left: 20%;
+		}
+		img{
+			width: 200px;
+			height: 300px;
+			border-radius: 10px;
+		}
+	</style>
+	<script type="text/javascript">
+		var tab_test=new Array();
+		var x=0;
+		var y=0;
+		var score=0;
+		function test(){
+			if(x==y){
+				score+=1;
+				return true;	
+			}
+			else{
+				return false;
+			}
+		}
+		function fonction(v){
+		
+			if(v.name==1){
+				v.src="1coeur.jpg";
+			}
+			if(v.name==2){
+				v.src="2trefle.jpg";
+			}
+			if(v.name==3){
+				v.src="3pique.jpg";
+			}
+			if(v.name==4){
+				v.src="joker.jpg";
+			}
+			if(x==0){
+				x=v.name;
+			}
+			if(y==0){
+				y=v.name;
+			}
+			//tab_test.push(v.name);
+
+			alert(x);
+
+			if((x!=0)&&(y!=0)){
+				if(test()==false){
+					alert("raté");
+					document.getElementsByName(x).src="carte0.jpg";
+					document.getElementsByName(y).src="carte0.jpg";
+				}
+				x=0;
+				y=0;
+				//tab_test=new Array;
+			}	
+		}
+	</script>
+</head>
+<body>
+	<div id="image">
+		<img name="1" src="carte0.jpg" onclick="fonction(this)">
+		<img name="2" src="carte0.jpg" onclick="fonction(this)">
+		<img name="4" src="carte0.jpg" onclick="fonction(this)">
+		<img name="3" src="carte0.jpg" onclick="fonction(this)">
+		<img name="2" src="carte0.jpg" onclick="fonction(this)">
+		<img name="3" src="carte0.jpg" onclick="fonction(this)">
+		<img name="1" src="carte0.jpg" onclick="fonction(this)">
+		<img name="4" src="carte0.jpg" onclick="fonction(this)">
+	</div>
+</body>
+</html>

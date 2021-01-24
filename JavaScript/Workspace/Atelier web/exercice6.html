@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>exercice6</title>
+	<script type="text/javascript">
+		function Calculer(){
+			var num=document.getElementById("champ").value;
+			var r=num;
+			if(num!=0){
+				r=r*num;
+				alert("Le carree de "+num+ " est "+r);
+			}	
+
+		}
+	</script>
+</head>
+<body>
+	<h1>Donner un nombre : </h1>
+	<input type="text" id="champ">
+	<button onclick="Calculer()">Calculer</button>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>exercice3</title>
+	<style type="text/css">
+		img{
+			width: 100px;
+		}
+		#box{
+			margin-top: 10px;
+			display: grid;
+			grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+			grid-row-gap: 10px;
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<button onclick="Avant();">Avant</button>
+		<button onclick="Apres();">Apres</button>
+		<button onclick="Remplacer();">Remplacer</button>
+	</div>
+	<div id="box">
+		<img src="images/image1.jpg" alt="img1" id="cible">
+	</div>
+	<script type="text/javascript">
+		function Avant(){
+			var div=document.getElementById('box');
+			var img1=document.getElementById("cible");
+			var nimg=document.createElement("img");
+			nimg.src="images/image2.jpg";
+			div.appendChild(nimg);
+			div.appendChild(img1);
+		}
+		function Apres(){
+			var div=document.getElementById('box');
+			var img1=document.getElementById("cible");
+			var nimg=document.createElement("img");
+			nimg.src="images/image2.jpg";
+			div.appendChild(img1);
+			div.appendChild(nimg);
+		}
+		function Remplacer(){
+			var div=document.getElementById('box');
+			var img1=document.getElementById("cible");
+			var nimg=document.createElement("img");
+			img1.src="images/image2.jpg";
+		}
+	</script>
+</body>
+</html>

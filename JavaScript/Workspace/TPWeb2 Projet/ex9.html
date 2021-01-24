@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Exercice 9</title>
+	<link rel="stylesheet" type="text/css" href="CSS/style.css">
+</head>
+<body>
+	<header>
+		<div class="iset_logo">
+			<a href="index.html"><img class="logoo" src="Images/logo.png"></a>
+		</div>
+		<div class="titre">
+			<h1>Bienvenue dans le Monde JS</h1>
+		</div>
+	</header>
+	<div class="contenu">
+		<nav>
+			<ul id="menu-accordeon">
+				<li><a href="#">Math</a>
+					<ul>
+						<li><a href="ex1.html">Exercice 1</a></li>
+						<li><a href="ex2.html">Exercice 2</a></li>
+						<li><a href="ex3.html">Exercice 3</a></li>
+						<li><a href="ex4.html">Exercice 4</a></li>
+						<li><a href="ex5.html">Exercice 5</a></li>
+					</ul>
+				</li>
+				<li><a href="#">String</a>
+					<ul>
+						<li><a href="ex6.html">Exercice 6</a></li>
+						<li><a href="ex7.html">Exercice 7</a></li>
+						<li><a href="ex8.html">Exercice 8</a></li>
+						<li><a href="ex9.html">Exercice 9</a></li>
+					</ul>
+				</li>
+				<li><a href="#">Date</a>
+					<ul>
+						<li><a href="ex10.html">Exercice 10</a></li>
+						<li><a href="ex11.html">Exercice 11</a></li>
+						<li><a href="ex12.html">Exercice 12</a></li>
+					</ul>
+				</li>
+				<li><a href="#">Tableau</a>
+					<ul>
+						<li><a href="ex13.html">Exercice 13</a></li>
+						<li><a href="ex14.html">Exercice 14</a></li>
+						<li><a href="ex15.html">Exercice 15</a></li>
+						<li><a href="ex16.html">Exercice 16</a></li>
+					</ul>
+				</li>
+				<li><a href="Etude.html">Etude de cas</a></li>
+			</ul>
+		</nav>
+		<section>
+			<article>
+				<p>Exercice 9</p>
+				<p id="result"></p>
+				<div class="form2">
+					<label>Nom/Prenom :</label>
+					<input type="text" id="nom_prenom" placeholder="aaaaa">
+					<label>E-mail :</label>
+					<input type="E-mail" id="email" placeholder="aaaa.bbbb@email.com">
+					<label>CIN : </label>
+					<input type="text" id="cin" placeholder="12345678">
+					<label>Un caractere : </label>
+					<input type="text" id="c" placeholder="c">
+				</div>
+				<input class="c" onclick="ex9();" type="button" value="Valider">
+					<script type="text/javascript">
+						function ex9(){
+							var n_p=document.getElementById("nom_prenom").value;
+							var mail=document.getElementById("email").value;
+							var cin=document.getElementById("cin").value;
+							var c=document.getElementById("c").value;
+							var testm=0;
+							var testcin=0;
+							var domaine;
+							var di=0;
+							var dj=0;
+							for(var i=0;i<mail.length;i++){
+								if(mail.charAt(i)=='@'){
+									di=i+1;
+									for(var j=i;j<(mail.length-2);j++){
+										if(mail.charAt(j)=='.'){
+											dj=j-1;
+											testm=1;
+										}
+									}
+								}
+							}
+							if(testm==0){
+								alert("Adresse Email invalid !");
+							}
+							if(cin.length==8){
+								testcin=1;
+							}
+							else{
+								alert("Erreur CIN !");
+							}
+							if((testcin==1)&&(testm==1)){
+								domaine=mail.substr(di,dj);
+								var compteur=0;
+								for(var i=0;i<n_p.length;i++){
+									if(n_p.charAt(i)==c){
+										compteur+=1;
+									}
+								}
+								document.getElementById("result").innerHTML="Bienvenue "+n_p.toUpperCase()+"<br> Nombre d'occurrence du caractere "+c+" est : "+compteur+"<br>Domaine : "+domaine;
+							}
+						}
+					</script>
+			</article>
+		</section>
+	</div>
+	<footer><p>©Copyright ISET Bizerte 2019 --- Webmaster</p></footer>
+</body>
+</html>

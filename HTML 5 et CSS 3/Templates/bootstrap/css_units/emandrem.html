@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Em Rem</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <div class="example">
+        <div class="em">2m
+            <div class="em">2m
+                <div class="em">2m</div>
+            </div>
+        </div>
+        <hr>
+        <div class="rem">2rem
+            <div class="rem">2rem
+                <div class="rem">2rem</div>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        :root {
+            font-size: 10px;
+        }
+            
+        .example {
+            font-size: 40px;
+        }
+        .em {
+            background: hsla(196, 100%, 55%, 0.3);
+            width: 2em;
+            font-size: 2em;
+        }
+        .rem {
+            background: hsla(196, 100%, 55%, 0.3);
+            width: 2rem;
+            font-size: 2rem;
+        }
+    </style>
+</body>
+</html>

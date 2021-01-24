@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>exercice3</title>
+	<style type="text/css">
+		fieldset{
+			margin-left: 35%;
+			width: 250px;
+		}
+	</style>
+	<script type="text/javascript">
+		function calcul(){
+			
+	
+				var lis_p=document.getElementsByName('liste_produit');
+				var produit;
+				for(var i=0;i<lis_p.length;i++){
+					if(lis_p[i].checked){
+						produit=lis_p[i].value;
+					}
+				}	
+	
+			var remise=document.getElementsByName('remi');
+			var r;
+			for(var i=0;i<remise.length;i++){
+				if(remise[i].checked){
+					r=remise[i].value;
+				}
+			}	
+			var ln=document.getElementById('sel').selectedIndex+1;
+			var prix=[10,20,30];
+			document.getElementById('result').innerHTML=(prix[produit]-(r*prix[produit]/100))*ln;
+		}
+		function select(){
+			var sell=document.getElementById('sel');
+			for(var i=0;i<10;i++){
+				var option=document.createElement('option');
+				option.value=i+1;
+				option.text=i+1;
+				sell.appendChild(option);
+			}
+		}
+	</script>
+</head>
+<body onload="select();">
+	<p id="result"></p>
+	<fieldset> 
+		<legend>Achat</legend>
+		<div id="lp">
+			<label>Liste des produits</label>
+			<br>
+			<input type="radio" value="0" name="liste_produit">
+			<label>Pull</label>
+			<br>
+			<input type="radio" value="1" name="liste_produit">
+			<label>Pantalon</label>
+			<br>
+			<input type="radio" value="2" name="liste_produit">
+			<label>Chemise</label>
+			<br>
+		</div>
+		<label>Le nombre de pierce achetes</label>
+		<br>
+		<select id="sel">
+			
+		</select>
+		<br>
+		<label>Remises</label>
+		<br>
+		<input type="radio" value="5" name="remi"><label>5%</label>
+		<br>
+		<input type="radio" value="2" name="remi"><label>2%</label>
+		<br>
+		<input type="radio" value="10" name="remi"><label>10%</label>
+		<br>
+
+		<br>
+		<button onclick="calcul();">Calculer</button>
+	</fieldset>
+
+	
+	
+</body>
+</html>

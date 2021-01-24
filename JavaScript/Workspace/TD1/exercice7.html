@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>exercice7</title>
+	<script type="text/javascript">
+		function calcul(){
+			var n1=Number(document.getElementById("n1").value);
+			var n2=Number(document.getElementById("n2").value);
+			var multi=n1*n2;
+			var add=n1+n2;
+			var sous=n1-n2;
+			var div=n1/n2;
+			document.getElementById("result").innerHTML=("multi = "+multi+"<br>addition = "+add+"<br>soustraction : "+sous+"<br>div : "+div);
+		}
+	</script>
+</head>
+<body>
+	<h1>Donner 2 nombre entier : </h1>
+	<input type="text" id="n1">
+	<br>
+	<input type="text" id="n2">
+	<br>
+	<button onclick="calcul()">calcul</button>
+	<br>
+	<p id="result"></p>
+</body>
+</html>

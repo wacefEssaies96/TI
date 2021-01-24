@@ -1,0 +1,36 @@
+body{
+	/*background-color: black;*/
+}
+header{
+	height: 300px;
+	background-color: red;
+}
+nav{
+	height: 60px;
+	border-top: solid;
+	border-bottom: solid;
+	padding-top: 20px;
+
+}
+nav a{
+	text-decoration: none;
+	color: black;
+	/*border : solid;*/
+	padding: 10px;
+	font-size: 25px;
+}
+section{
+	height: 400px;
+	width: 69%;
+	background-color: grey;
+	float: left;
+
+}
+aside{
+	float: left;
+	border:solid;
+	width: 20%;
+}
+textarea{
+	width: 90%;
+}

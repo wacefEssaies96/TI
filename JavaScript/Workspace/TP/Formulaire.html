@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>formulaire</title>
+	<script type="text/javascript">
+		function fonction(){
+			var listcheck=document.getElementsByName('assaisoner');
+			var list="";
+			for(var i=0;i<listcheck.length;i++){
+				if(listcheck[i].checked){
+					list+=listcheck[i].value+',';
+				}
+			}
+			//alert(list);
+			var listR=document.getElementsByName('paiement');
+			for(var i=0;i<listR.length;i++){
+				if(listR[i].checked){
+					alert(listR[i].value);
+				}
+			}
+			var nb=document.getElementById('nbP').value;
+			alert(nb);
+			var fichier=document.getElementById('fichier').value;
+			// alert(fichier);
+		}
+	</script>
+</head>
+<body>
+	<fieldset style="width: 630px; margin-left: 25%; margin-top: 10%;">
+		<legend>Votre commande</legend>
+		<select>
+			<option>poulet/frites</option>
+			<option>pizza</option>
+			<option>moules_frites</option>
+		</select>
+		<label>pour</label>
+		<input size="2" id="nbP" maxlength="2" type="text" style="width: 60px;" value="5">
+		<label>personne</label>
+		<label>livree a </label>
+		<select>
+			<option>19 heurs</option>
+			<option>20 heurs</option>
+			<option>21 heurs</option>
+			<option>22 heurs</option>
+		</select>
+		<br>
+		<div style="width: 200px; float: left;">
+			<br>
+			<label>Avec :</label><br>
+			<input type="checkbox" name="assaisoner" value="huile">de l'huile piquante<br>
+			<input type="checkbox" name="assaisoner" value="ketchup">du ketchup<br>
+			<input type="checkbox" name="assaisoner" value="moutarde" checked>de la moutarde<br>
+			<input type="checkbox" name="assaisoner" value="mayonnaise">de la mayonnaise<br>
+		</div>
+		<div style="width: 200px;float: left;">
+			<br>
+			<label>Paiement par :</label><br>
+			<input type="radio" name="paiement" value="carte_blue">Carte Bleue<br>
+			<input type="radio" name="paiement" value="visa">Carte Visa<br>
+			<input type="radio" name="paiement" value="master_card" checked>Master Card<br>
+		</div>
+		<div style="float: left; padding-top:50px; padding-bottom: 50px;">	
+			<label>Code</label>
+			<input type="password">
+		</div>
+		<br>
+			<label style="float: left;">Votre Adresse :</label>
+			<textarea style="width: 75%; " placeholder="Chez moi"></textarea>
+			<label>Attachez-un Plan :</label>
+			<input type="file" name="fichier" id="fichier">
+			<br><br>
+			<div style="padding-left:30%; ">
+				<!-- <input type="submit" name="" value="Commander" onsubmit="fonction();"> -->
+				<button onclick="fonction();">Commander</button>
+				<input type="submit" name="" value="Effacer">
+				<input type="submit" name="" value="Informations">
+			</div>
+
+	
+	</fieldset>
+</body>
+</html>

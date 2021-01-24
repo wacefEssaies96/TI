@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>exercice9</title>
+<!-- 	<script type="text/javascript">
+		var n=prompt("donner une entier : ");
+		var tab=new Array(11);
+		var i;
+		for(i=0;i<11;i++){
+			tab[i]=n*i;
+		alert("");
+		}
+		
+	</script> -->
+</head>
+<body>
+	<h1>Donner un entier entre 1 et 10 : </h1>
+	<input type="text" id="champ">
+	<button onclick="calculer()">calculer</button>
+	<p id="resultat"></p>
+	<script type="text/javascript">
+		function calculer(){
+			var n=document.getElementById("champ").value;
+			var i;
+			var t=new Array(11);
+			for(i=1;i<11;i++){
+				t[i]=Number(i)*Number(n);
+			}
+			alert(t);
+			
+		}
+
+	</script>
+</body>
+</html>

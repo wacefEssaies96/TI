@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>exercice2</title>
+</head>
+<body>
+	<h1>Donner un prix : </h1>
+	<br>
+	<input type="text" id="prix">
+	<br>
+	<button onclick="calcule()">calcule</button>
+	<script type="text/javascript">
+		function calcule(){
+			var champ=document.getElementById("prix").value;
+			const TVA=18.6;
+			var v=TVA/100;
+			var x=champ*v;
+			var prixttc=parseFloat(champ)+parseFloat(x);
+			alert(prixttc);
+		}
+	</script>
+</body>
+</html>

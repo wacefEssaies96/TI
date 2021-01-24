@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form</title>
+    <style>
+        .lien {
+            display: inline-block;
+        }
+
+        #nom {
+            background-color:aquamarine;
+        }
+    </style>
+</head>
+<body>
+    <form action="trait.php">
+        <fieldset>
+            <legend>INPUTS</legend>
+        <label for="nom">Nom</label>
+        <input type="text" placeholder="Saisir un nom" id="nom">
+    </fieldset>
+        <select>
+            <option value="">ISET Bizerte</option>
+            <option value="">ISET Kebili</option>
+            <option value="">ISET Charguia</option>
+        </select>
+        <fieldset>
+            <legend>BOUTONS</legend>
+        <input type="submit" value="Envoyer">
+        <input type="reset">
+    
+        </fieldset>
+
+        <h4 class="lien">un texte</h4>
+        <h4 class="lien"></h4>
+    </form>
+</body>
+</html>

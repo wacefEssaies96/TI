@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>exercice4</title>
+</head>
+<body>
+	<h1>Un titre</h1>
+	<p>Un paragraphe</p>
+	<div id="information">
+		<p>Un titre de niveau 2</p>
+		<p>Un sous-titre de niveau 2</p>
+		<p>un paragraph de niveau 2</p>
+	</div>
+	<a href="#">Un premier lien</a>
+	<a href="#">Un deuxieme lien</a>
+	<br><br>
+	<input type="button" value="Nombres" onclick="Nombres();">
+	<input type="button" value="contenu" onclick="Contenu();">
+	<div id="resultat"></div>
+	<script type="text/javascript">
+		function Nombres(){
+			var p=document.getElementsByTagName('p');
+			var a=document.getElementsByTagName('a');
+			document.getElementById('resultat').innerHTML="Nombre de paragraphe : "+p.length+"<br> Nombre de lien : "+a.length+"<br>";
+		}
+		function Contenu(){
+			var v=document.getElementsByTagName('p');
+			var a=document.getElementsByTagName('a');
+			var text="";
+			var lien="";
+			var adresse="";
+			for(var i=0;i<v.length;i++){
+				text=text+" "+v[i].innerHTML+"<br>";
+			}
+			for(var i=0;i<a.length;i++){
+				lien=lien+" "+a[i].innerHTML+"<br>";
+			}
+			for(var i=0;i<a.length;i++){
+				adresse=adresse+" "+a[i].href+"<br>";
+			}
+			document.getElementById('resultat').innerHTML=text+lien+adresse;
+		}
+	</script>
+</body>
+</html>

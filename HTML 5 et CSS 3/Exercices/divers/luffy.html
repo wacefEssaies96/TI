@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Luffy</title>
+    <style>
+        * {
+            margin: 0;
+        }
+        header {
+            position: relative;
+            height: 60px;
+            width: 100%;
+            background-color: orangered;
+            position: fixed;
+            top: 50px;
+        }
+        
+        header:hover {
+            animation: banniere 2s ease-in-out 0s infinite;
+        }
+
+
+        #img2 {
+            position: fixed;
+            bottom: 10px;
+            left: 10px;
+            width: 5%;
+            transition: all 0.4s;
+        }
+
+        #img2:hover {
+            transform: scale(1.2);
+        }
+
+        #img1 {
+            position: absolute;
+            left: 0;
+            top: -25px;
+            width: 100px;
+        }
+
+        @keyframes banniere {
+            0% {
+                background-color: orangered;
+            }
+            50% {
+                background-color: orange;
+            }
+            100% {
+                background-color: orangered;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img id="img2" src="proxy.duckduckgo.com.png" alt="">
+        <img id="img1" src="one piece.png" alt="" title="One Piece">
+    </header>    
+</body>
+</html>

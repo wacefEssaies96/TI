@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>test</title>
+	<script type="text/javascript">
+		function calcul() {
+			var nc1=Number(document.getElementById("nc1").value);
+			var nc2=Number(document.getElementById("nc2").value);
+			var ns=Number(document.getElementById("ns").value);
+			var rs=(nc1+nc2+(2*ns))/4;
+			document.getElementById("result").innerHTML="le resultat est : "+rs;
+			document.getElementById("result2").innerText="le resultat est : "+rs;
+		}
+	</script>
+</head>
+<body>
+	<input type="text" id="nc1">
+	<input type="text" id="nc2">
+	<input type="text" id="ns">
+	<button onclick="calcul();">calcul</button>
+	<h2 id="result"></h2>
+	<label id="result2"></label>
+</body>
+</html>

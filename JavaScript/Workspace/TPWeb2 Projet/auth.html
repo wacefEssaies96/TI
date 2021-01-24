@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Auth</title>
+	<link rel="stylesheet" type="text/css" href="CSS/style.css">
+	<script type="text/javascript">
+		function validation() {
+			var l=document.getElementById("login").value;
+			var p=document.getElementById("pass").value;
+			var login_admin="wacef";
+			var pwd_admin="123456";
+			if((l==login_admin)&&(p==pwd_admin)){
+				window.location.href = "index.html";
+			}
+			else{
+				document.getElementById("r").innerHTML="Login ou mot de passe erroné.";
+			}
+		}
+	</script>
+</head>
+<body>
+	<p id="r"></p>
+	<div class="form">
+		<div class="lab1"><label>Login : </label></div>
+		<div class="in1"><input class="inpu" type="text" placeholder="Wacef" id="login" required></div>
+		<div class="lab2"><label>Password : </label></div>
+		<div class="in2"><input class="inpu" type="Password" placeholder="**************" id="pass" required></div>
+		<div class="bouton1"><input class="inpu" onclick="validation();" type="button" value="Valider"></div>
+		<div class="bouton2"><input class="inpu" type="button" value="Annuler"></div>
+	</div>
+</body>
+</html>

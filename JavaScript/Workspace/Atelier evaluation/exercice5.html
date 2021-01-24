@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>exercice5</title>
+	
+</head>
+<body>
+	<img src="carte1.jpg" id="img" onclick="permute();">
+
+	<script type="text/javascript">
+		var x=0;
+		function permute(){
+			if(x==0){
+				var im=document.getElementById('img').src="carte2.jpg";
+				x=1;
+			}
+			else{
+				im=document.getElementById('img').src="carte1.jpg";
+				x=0;
+			}
+		}
+
+	</script>
+</body>
+</html>

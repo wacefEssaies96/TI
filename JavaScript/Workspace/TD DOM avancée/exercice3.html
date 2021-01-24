@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Exercice3</title>
+	<!-- <style type="text/css">
+		p{
+			size: 40px;
+			color: #09C;
+			border: ;
+			text-align: center;
+		}
+	</style> -->
+</head>
+<body id="body">
+	<p id="text">Bonjour tous le monde !</p>
+	<div id="div">
+		
+	</div>
+	<input type="text" name="zone" id="z">
+	<button onclick="changerText();">Changer le texte</button>
+	<input type="submit" onclick="copierText();" value="Copier">
+	<script type="text/javascript">
+		function changerText(){
+			var x=document.getElementById('z').value;
+			document.getElementById('text').innerHTML=x;
+		}
+		function copierText(){
+			var div=document.getElementById('div');
+			var x=document.getElementById('z').value;
+			var text=document.createTextNode(x);
+			var y=document.createElement("p");
+
+
+			y.appendChild(text);
+			div.appendChild(y);
+			y.style.color="#09C";
+			y.style.size="40px";
+			y.style.border="2px solid #E1E1E1";
+			//y.style.text-align="center";
+		}
+	</script>
+</body>
+</html>

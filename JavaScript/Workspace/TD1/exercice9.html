@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>exercice9</title>
+	<script type="text/javascript">
+		function calcul(){
+			var taille=Number(document.getElementById("taille").value);
+			var age=Number(document.getElementById("age").value);
+			var sexe=document.getElementById("sexe").value;
+			var result;
+				if(sexe=='Homme'){
+					result=(3*taille-250)*(age+270)/1200;
+					alert("Le taille ideal est : "+result+"Kg");
+				}
+				else if(sexe=='Femme'){
+					result=(taille/2-30)*(180+1)/200;
+					alert("Le taille ideal est : "+result+"Kg");
+				}
+			else{
+				alert("Erreur !");
+			}
+		}
+	</script>
+</head>
+<body>
+	<table>
+			<tr><td><label>Taille :</label> <input type="Number" id="taille" placeholder="180"></td></tr>
+			<tr><td><label>Age : </label><input type="Number" id="age" placeholder="20"></td></tr>
+			<tr>
+				<td>Sexe : <select id="sexe">
+					<option>--selectioner le sexe--</option>
+					<option value="Homme">Homme</option>
+					<option value="Femme">Femme</option>
+				</select>
+				</td>
+			</tr>	
+	</table>
+	<button onclick="calcul()">Afficher</button>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>exercice4</title>
+	<style type="text/css">
+		fieldset{
+			margin-left: 35%;
+			width: 380px;
+		}
+		.di{
+			display: grid;
+			grid-template-columns: 1fr 2fr;
+		}
+	</style>
+	<script type="text/javascript">
+		function verif(){
+			var cin=document.getElementById('cin').value;
+			var mail=document.getElementById('email').value;
+			var test=isNaN(cin);
+			 if(isNaN(cin)==true){
+			 	alert("Erreur");
+			 	if(cin.length>9){
+			 	 	alert("CIN doit contenir que 8 chiffre");
+			 	 	return false;
+			 	}
+			 	return false;
+			 }
+			 else return true;
+		}
+		function annuler(){
+			var np=document.getElementById('np').value='';
+			var cin=document.getElementById('cin').value='';
+			var mail=document.getElementById('email').value='';
+		}
+	</script>
+</head>
+<body>
+	<fieldset>
+		<legend>Inscription</legend>
+		<div class="di">
+			<label>Nom et Prenom *: </label>
+			<input type="text" id="np" required>
+			<label>CIN *: </label>
+			<input type="text" id="cin" required>
+			<label>Adresse e-mail *: </label>
+			<input type="text" id="email" required>
+		</div>
+		<label>Niveau : </label>
+		<input type="radio" value="secondaire" name="n" checked>Secondaire<input value="univer" type="radio" name="n">Universitaire<input type="radio" value="autre" name="n">Autre<br>
+		<button onclick="verif();">Envoyer</button>
+		<button onclick="annuler();">Annuler</button>
+	</fieldset>
+</body>
+</html>

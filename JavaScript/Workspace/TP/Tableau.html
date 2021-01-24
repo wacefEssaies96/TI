@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>exercice1</title>
+</head>
+<body onload="ajouter();">
+	<table id="table" style="border:1px solid; ">
+		<tr>
+			<td>Marque</td>
+			<td>Annee de fabrication</td>
+			<td>date achat</td>
+		</tr>
+	</table>
+	<script type="text/javascript">
+		var n=Number(prompt("donner le nombre de vehicule : "));
+		var tabbb=new Array();
+		for(var i=0;i<3;i++){
+			tabbb[i]=new Array();
+		}
+		for(var i=0;i<3;i++){
+			for(var j=0;j<n;j++){
+				if(i==0){
+					tabbb[i][j]=prompt("Donnez la marque : "+(j+1));
+				}
+				if(i==1){
+					tabbb[i][j]=prompt("Donnez l annee de production : "+(j+1));
+				}
+				if(i==2){
+					tabbb[i][j]=prompt("Date achat : "+(j+1));
+				}
+			}
+		}
+		function ajouter(){
+			var tableau=document.getElementById('table');
+			for(var j=0;j<n;j++){
+			 	var ligne=document.createElement("tr");
+			 	for(var i=0;i<3;i++){
+			 		var colonne=document.createElement("td");
+			 		colonne.style.border= "solid 1px black" ;
+			 		var text=document.createTextNode(tabbb[i][j]);
+			 		
+			 		colonne.appendChild(text);
+			 		ligne.appendChild(colonne);
+			 	}
+			 	tableau.appendChild(ligne);
+			}	
+		}		
+		</script>
+</body>
+</html>

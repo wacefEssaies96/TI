@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>exercice2</title>
+	<script type="text/javascript">
+		var mois=prompt("donner le numero du mois");
+		var annee=prompt("donner l'annee : ");
+		var i;
+		for(i=1;i<13;i++){
+			if(i==mois){
+				if((mois==1)||(mois==3)||(mois==5)||(mois==7)||(mois==8)||(mois==10)||(mois==12)){
+					alert("31 jours");
+				}
+				if((mois==4)||(mois==6)||(mois==9)||(mois==11)){
+					alert("30 jours");
+				}
+				if(mois==2){
+					alert("28 jours");
+				}
+			}
+		}
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>
